@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lapr.project.serviceprovider.gpsd.ui.SortRecordsServiceOrdersUI">
+  <tabs>
+    <Tab fx:id="tab1" text="List of service orders">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="31.0" layoutY="31.0" text="List of your service execution orders:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnSort" layoutX="544.0" layoutY="378.0" mnemonicParsing="false" onAction="#chooseSortParameters" prefHeight="31.0" prefWidth="66.0" text="Sort" />
+                  <Button fx:id="btnCancel" layoutX="31.0" layoutY="378.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+                  <ListView fx:id="txtList" layoutX="31.0" layoutY="75.0" prefHeight="281.0" prefWidth="573.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tab2" text="Sort parameters">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="19.0" layoutY="55.0" text="Choose the parameter through which you want the list to be sorted">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbSort" layoutX="224.0" layoutY="155.0" prefWidth="150.0" />
+                  <Button fx:id="btnSort1" layoutX="471.0" layoutY="237.0" mnemonicParsing="false" onAction="#sortServiceOrders" prefHeight="31.0" prefWidth="65.0" text="Sort" />
+                  <Button fx:id="btnCancel" layoutX="62.0" layoutY="237.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="tab3" text="Sorted list of service orders">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="34.0" text="Sorted list of your service execution orders:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnFinish" layoutX="546.0" layoutY="386.0" mnemonicParsing="false" onAction="#exit" prefHeight="31.0" prefWidth="65.0" text="Ok" />
+                  <ListView fx:id="txtSortedList" layoutX="28.0" layoutY="78.0" prefHeight="294.0" prefWidth="579.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

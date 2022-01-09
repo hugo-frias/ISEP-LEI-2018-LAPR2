@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lapr.project.serviceprovider.gpsd.ui.HistoricalServiceOrdersUI">
+   <children>
+      <TextField fx:id="txtName" layoutX="126.0" layoutY="21.0" prefHeight="25.0" prefWidth="257.0" />
+      <Button fx:id="btnSearch" defaultButton="true" layoutX="438.0" layoutY="21.0" mnemonicParsing="false" onAction="#search" text="Search" />
+      <ListView fx:id="lstServiceOrders" layoutX="21.0" layoutY="112.0" prefHeight="295.0" prefWidth="592.0" />
+      <Label layoutX="80.0" layoutY="25.0" text="Nome:" />
+      <Button fx:id="btnReturn" defaultButton="true" layoutX="519.0" layoutY="21.0" mnemonicParsing="false" onAction="#cancel" text="Return" />
+      <Label layoutX="34.0" layoutY="65.0" text="ZipCode:" />
+      <TextField fx:id="txtPostal" layoutX="126.0" layoutY="61.0" prefHeight="25.0" prefWidth="365.0" />
+   </children>
+</Pane>

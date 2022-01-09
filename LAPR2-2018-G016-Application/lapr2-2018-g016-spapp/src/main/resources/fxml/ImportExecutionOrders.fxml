@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lapr.project.serviceprovider.gpsd.ui.ImportExecutionOrdersUI">
+   <children>
+      <Label layoutX="29.0" layoutY="41.0" text="Please introduce the name of the file you want to import">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnImport" layoutX="308.0" layoutY="342.0" mnemonicParsing="false" onAction="#importServiceOrders" prefHeight="46.0" prefWidth="279.0" text="Import Service Execution Orders">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="28.0" layoutY="164.0" text="Name of file:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNameFile" layoutX="143.0" layoutY="162.0" prefHeight="31.0" prefWidth="420.0" />
+      <Button fx:id="btnCancel" layoutX="57.0" layoutY="342.0" mnemonicParsing="false" onAction="#cancel" prefHeight="46.0" prefWidth="86.0" text="Cancel" />
+      <Label layoutX="29.0" layoutY="240.0" text="File format:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbFileFormat" layoutX="143.0" layoutY="238.0" prefWidth="150.0" />
+   </children>
+</Pane>
