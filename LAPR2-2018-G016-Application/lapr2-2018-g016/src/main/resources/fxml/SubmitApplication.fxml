@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="lapr.project.gpsd.ui.SubmitApplicationUI">
+  <children>
+    <TabPane prefHeight="600.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <tabs>
+        <Tab fx:id="tabData" text="Data">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <BorderPane prefHeight="451.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <bottom>
+                    <Button fx:id="btnVData" mnemonicParsing="false" onAction="#btnVDataAction" text="Validate" BorderPane.alignment="CENTER">
+                      <BorderPane.margin>
+                        <Insets bottom="5.0" />
+                      </BorderPane.margin>
+                    </Button>
+                  </bottom>
+                  <center>
+                    <GridPane BorderPane.alignment="CENTER">
+                      <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name" wrappingWidth="176.443359375" GridPane.halignment="CENTER">
+                          <font>
+                            <Font name="Arial" size="37.0" fx:id="x1" />
+                          </font>
+                        </Text>
+                        <TextField fx:id="txtFullName" prefHeight="25.0" prefWidth="254.0" GridPane.columnIndex="1" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="NIF" wrappingWidth="67.443359375" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtNif" prefHeight="25.0" prefWidth="254.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" wrappingWidth="254.443359375" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtPhoneNumber" prefHeight="25.0" prefWidth="254.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="107.443359375" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtEmail" prefHeight="25.0" prefWidth="254.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="176.443359375" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtAddress" prefHeight="25.0" prefWidth="283.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Post Code" wrappingWidth="190.443359375" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtPostCode" prefHeight="25.0" prefWidth="283.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Locality" wrappingWidth="153.443359375" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <TextField fx:id="txtLocality" prefHeight="25.0" prefWidth="283.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </center>
+                  <right>
+                    <AnchorPane prefHeight="421.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+                  </right>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabAQ" text="Academic Qualifications">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <BorderPane prefHeight="451.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <bottom>
+                    <GridPane BorderPane.alignment="CENTER">
+                      <children>
+                        <Button fx:id="btnAddAcadQuali" mnemonicParsing="false" onAction="#btnAddAcadQualiAction" text="Add Another Academic Qualification" GridPane.columnIndex="0" GridPane.halignment="CENTER" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </bottom>
+                  <center>
+                    <GridPane prefHeight="181.0" prefWidth="424.0" BorderPane.alignment="CENTER">
+                      <children>
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Designation" wrappingWidth="195.443359375" GridPane.halignment="CENTER" />
+                        <TextField fx:id="txtDesignation" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Degree" wrappingWidth="129.443359375" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtDegree" prefHeight="25.0" prefWidth="283.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Classification" wrappingWidth="221.443359375" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtClassification" prefHeight="25.0" prefWidth="283.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </center>
+                  <right>
+                    <AnchorPane prefHeight="421.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+                  </right>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabPQ" text="Professional Qualifications">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <BorderPane prefHeight="451.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <bottom>
+                    <GridPane BorderPane.alignment="CENTER">
+                      <children>
+                        <Button fx:id="btnAddProQuali" mnemonicParsing="false" onAction="#btnAddProQualiAction" text="Add Another Professional Qualification" GridPane.columnIndex="0" GridPane.halignment="CENTER" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </bottom>
+                  <center>
+                    <GridPane BorderPane.alignment="CENTER">
+                      <children>
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="195.443359375" GridPane.halignment="CENTER" />
+                        <TextField fx:id="txtDescription" prefHeight="31.0" prefWidth="330.0" GridPane.columnIndex="1" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </center>
+                  <right>
+                    <AnchorPane prefHeight="421.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+                  </right>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabCategory" text="Category">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <BorderPane prefHeight="451.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <bottom>
+                    <GridPane>
+                      <children>
+                        <Button fx:id="btnAddCat" mnemonicParsing="false" onAction="#btnAddCatAction" text="Add" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                        <Button id="btnAddCat" fx:id="btnDone" mnemonicParsing="false" onAction="#btnDoneAction" text="Done" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </bottom>
+                  <center>
+                    <GridPane>
+                      <children>
+                        <ChoiceBox fx:id="cbCategory" prefHeight="38.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Category:" wrappingWidth="195.443359375" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </center>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabApplication" text="Application">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <BorderPane prefHeight="449.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <bottom>
+                    <GridPane>
+                      <children>
+                        <Button fx:id="btnConfirm" mnemonicParsing="false" onAction="#btnConfirmAction" text="Confirm" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                        <Button id="btnConfirm" fx:id="btnChangeData" mnemonicParsing="false" onAction="#btnChangeDataAction" text="Cancel" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </bottom>
+                  <center>
+                    <TextArea fx:id="txtApplication" prefHeight="338.0" prefWidth="522.0">
+                      <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                      </BorderPane.margin>
+                    </TextArea>
+                  </center>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,4 @@
+Number ; ClientsName ; Distance ; ServiceCategory ; ServiceType ; Date ; Time ; ClientAddress ; Location ; ClientsZipCode
+-1Joana Santos;0,00;Picheleiro;Tipo Serviço: Fixed;Sunday, 16 of June of 2019;lapr.project.gpsd.model.SchedulePreference@19262a91;R. Cegonheira, nº 3;Maia;ZipCode: 4470-528
+ Latitude: 41,23
+Longitude: -8,61

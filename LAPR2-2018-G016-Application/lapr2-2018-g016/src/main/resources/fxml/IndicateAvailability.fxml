@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lapr.project.gpsd.ui.IndicateAvailabilityUI">
+   <children>
+      <TabPane fx:id="tabPane" layoutY="1.0" prefHeight="480.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab" text="Availability data">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="639.0">
+                     <children>
+                        <Label layoutX="38.0" layoutY="23.0" text="Note: choose a date other than the current day or behind it.">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="99.0" text="Date of beginning:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="306.0" layoutY="99.0" text="Date of ending:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dpBeginning" layoutX="39.0" layoutY="137.0" prefHeight="31.0" prefWidth="181.0" />
+                        <DatePicker fx:id="dpEnding" layoutX="306.0" layoutY="137.0" prefHeight="31.0" prefWidth="173.0" />
+                        <Label layoutX="36.0" layoutY="206.0" text="Note: choose an hour between 6:01 and 23:59 (inclusive).">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="271.0" text="Hour of beginning:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="305.0" layoutY="271.0" text="Hour of ending:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtHourBeginning" layoutX="36.0" layoutY="308.0" prefHeight="31.0" prefWidth="68.0" />
+                        <TextField fx:id="txtHourEnding" layoutX="305.0" layoutY="308.0" prefHeight="31.0" prefWidth="68.0" />
+                        <Button fx:id="btnSave" layoutX="528.0" layoutY="376.0" mnemonicParsing="false" onAction="#createNewAvailability" text="Save" />
+                        <Button fx:id="btnCancel" layoutX="54.0" layoutY="376.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+                        <TextField fx:id="txtMinuteBeginning" layoutX="130.0" layoutY="308.0" prefHeight="31.0" prefWidth="68.0" />
+                        <Label layoutX="112.0" layoutY="306.0" text=":">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtMinuteEnding" layoutX="403.0" layoutY="308.0" prefHeight="31.0" prefWidth="67.0" />
+                        <Label layoutX="387.0" layoutY="306.0" text=":">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="36.0" layoutY="51.0" text="Also, don't choose sundays.">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab1" text="aditional patterns">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbtnMonday" layoutX="128.0" layoutY="176.0" mnemonicParsing="false" text="Monday">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <Label layoutX="24.0" layoutY="31.0" prefHeight="15.0" prefWidth="543.0" text="Note:">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="rbtnTuesday" layoutX="128.0" layoutY="218.0" mnemonicParsing="false" text="Tuesday">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rbtnWednesday" layoutX="128.0" layoutY="261.0" mnemonicParsing="false" text="Wednesday">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rbtnThursday" layoutX="386.0" layoutY="176.0" mnemonicParsing="false" text="Thursday">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rbtnFriday" layoutX="387.0" layoutY="218.0" mnemonicParsing="false" text="Friday">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rbtnSaturday" layoutX="387.0" layoutY="261.0" mnemonicParsing="false" text="Saturday">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <Label layoutX="24.0" layoutY="74.0" text="For example, if you choose Monday and Tuesday, that means that you">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="101.0" text=" want to work only on those days during the chosen availability period.">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnSave1" layoutX="505.0" layoutY="354.0" mnemonicParsing="false" onAction="#addPatterns" text="Save" />
+                        <Button fx:id="btnCancel" layoutX="63.0" layoutY="354.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

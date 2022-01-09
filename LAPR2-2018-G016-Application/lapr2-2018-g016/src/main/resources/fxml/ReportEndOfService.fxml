@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lapr.project.gpsd.ui.ReportEndOfServiceUI">
+   <children>
+      <ComboBox fx:id="cmbServiceOrders" layoutX="122.0" layoutY="114.0" prefHeight="31.0" prefWidth="397.0" />
+      <TextField fx:id="txtProblem" layoutX="82.0" layoutY="240.0" onMouseClicked="#writeIssue" prefHeight="123.0" prefWidth="213.0" />
+      <Button fx:id="btnFinished" layoutX="283.0" layoutY="426.0" mnemonicParsing="false" onAction="#changeToFinished" text="Finished" />
+      <Button fx:id="btnAddIssue" disable="true" layoutX="275.0" layoutY="384.0" mnemonicParsing="false" onAction="#addIssue" prefHeight="31.0" prefWidth="90.0" text="Add Issue" />
+      <TextField fx:id="txtStrategy" layoutX="351.0" layoutY="240.0" onMouseClicked="#writeIssue" prefHeight="123.0" prefWidth="213.0" />
+      <Label layoutX="156.0" layoutY="211.0" prefHeight="21.0" prefWidth="66.0" text="Problem" />
+      <Label layoutX="430.0" layoutY="211.0" text="Strategy" />
+      <Button fx:id="btnCancel" layoutX="14.0" layoutY="426.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+   </children>
+</Pane>

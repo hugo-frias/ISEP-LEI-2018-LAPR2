@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lapr.project.gpsd.ui.DecideOnAffectationsUI">
+   <children>
+      <ListView fx:id="lstVwAffectations" layoutX="138.0" layoutY="157.0" onMouseClicked="#chooseAffectation" prefHeight="161.0" prefWidth="354.0" />
+      <ComboBox fx:id="cmbServiceRequest" layoutX="138.0" layoutY="85.0" onAction="#showAffectations" prefHeight="31.0" prefWidth="354.0" />
+      <Button fx:id="btnConfirmAll" layoutX="269.0" layoutY="379.0" mnemonicParsing="false" onAction="#confirmAll" text="Confirm all" />
+      <Button fx:id="btnReject" disable="true" layoutX="285.0" layoutY="341.0" mnemonicParsing="false" onAction="#reject" text="Reject" />
+      <Button fx:id="btnCancel" layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+   </children>
+</Pane>
